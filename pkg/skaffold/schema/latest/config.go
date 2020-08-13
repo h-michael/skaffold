@@ -930,6 +930,9 @@ type DockerArtifact struct {
 
 	// NoCache used to pass in --no-cache to docker build to prevent caching.
 	NoCache bool `yaml:"noCache,omitempty"`
+
+	// SSH is passed as an argument to the --ssh option.
+	SSH string `yaml:"ssh,omitempty"`
 }
 
 // BazelArtifact describes an artifact built with [Bazel](https://bazel.build/).

@@ -454,6 +454,10 @@ func GetBuildArgs(a *latest.DockerArtifact) ([]string, error) {
 		args = append(args, "--no-cache")
 	}
 
+	if a.SSH != "" {
+		args = append(args, "--ssh", strings.ToLower(a.SSH))
+	}
+
 	return args, nil
 }
 
